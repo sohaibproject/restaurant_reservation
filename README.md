@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# Reservation Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+A comprehensive reservation management application built with React, TypeScript, and Tailwind CSS. The app provides features to filter, sort, and search reservations, making it easy for users to manage and view their bookings.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Filter Reservations:** Filter by status, date range, shift, area, and search by customer name.
+- **Sort Reservations:** Sort by guest number or customer name in ascending or descending order.
+- **Search Functionality:** Search for reservations by customer first and last names.
+- **Date Range Filtering:** Filter reservations by start and end dates.
+- **Caching**: Caches filtered and sorted results for faster access.
+- **Responsive Design**: Optimized for various screen sizes.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React:** JavaScript library for building user interfaces.
+- **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
+- **Tailwind CSS:** A utility-first CSS framework for creating custom designs.
+- **Vite:** For fast bundling.
+- **React Router:** For routing.
+- **Other dependencies:**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+To get started with the Reservation Management app, follow these steps:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the Repository:**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   git clone <https://github.com/sohaibproject/restaurant_reservation.git>
+   ```
+
+2. **Navigate to the Project Directory:**
+
+   ```bash
+   cd restaurant_reservation
+
+   ```
+
+3. **Install Dependencies:**
+
+   ```bash
+   npm install
+
+   ```
+
+4. **Start the Development Server:**
+
+   ```bash
+   npm run dev
+
+   ```
+
+   ## Screenshots
+
+   <img src="./src/assets/screenshoot.png">
