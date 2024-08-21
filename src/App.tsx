@@ -1,12 +1,20 @@
-// import './App.css';
+import { lazy, Suspense } from 'react';
+import GlobalLoading from './views/components/shared/loading/Globalloading';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+const NotFound = lazy(() => import('./views/pages/not-found'));
+const ReservationApp = lazy(() => import('./views/pages/reservationApp'));
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header bg-blue-500 text-white p-4'>
-        <h1 className='text-2xl font-bold'>Hello, Tailwind CSS!</h1>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<GlobalLoading />}>
+        <Routes>
+          <Route path='/' element={<ReservationApp />} />
+          <Route path='/404' element={<NotFound />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 
